@@ -1,38 +1,161 @@
+:root {
+  --bg: #050505;
+  --bg-dark: #0b0b0b;
+  --card: #141414;
+  --accent: #ff0000;
+  --accent-dark: #b30000;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #0d0d0d;
-  color: white;
+  background: radial-gradient(circle at top, #330000 0, #000000 40%, #000000 100%);
+  color: var(--text);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: #111;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #444;
+  background: linear-gradient(90deg, #000000, #330000, #000000);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--accent);
 }
 
-button {
-  padding: 10px 20px;
-  background: #ff0000;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.header-actions button {
+  padding: 8px 16px;
+  background: var(--accent);
   border: none;
-  color: white;
+  color: var(--text);
   cursor: pointer;
-  margin: 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.header-actions button:hover {
+  background: var(--accent-dark);
+}
+
+main {
+  padding: 20px;
+}
+
+.panel-section {
+  background: var(--card);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.panel-section h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
 }
 
 table {
-  width: 90%;
-  margin: 20px auto;
+  width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
 th, td {
-  padding: 12px;
-  border-bottom: 1px solid #444;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #111;
 }
 
 tr:hover {
-  background: #222;
+  background: #1b1b1b;
+}
+
+button {
+  padding: 6px 10px;
+  background: var(--accent);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+button.danger {
+  background: #b30000;
+}
+
+button.danger:hover {
+  background: #800000;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-row input,
+.form-row select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #111;
+  color: var(--text);
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
 }
