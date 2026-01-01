@@ -2,32 +2,107 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Escuadrón X - Panel Profesional</title>
+  <title>Escuadrón X - Panel de Administración</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1453100452265857044/1453362136943431731/ChatGPT_Image_23_dic_2025_20_28_05.png?ex=6957b877&is=695666f7&hm=1a803ae0a5132bb471d81d00a021bcfd41d1ca517747bd93b26d63f3462469b6">
   <script type="module" src="app.js" defer></script>
 </head>
 <body>
 
   <header>
-    <h1>Escuadrón X - Panel de Administración</h1>
-    <button id="loginBtn">Iniciar sesión con Google</button>
-    <button id="logoutBtn" style="display:none;">Cerrar sesión</button>
+    <div class="logo-area">
+      <img src="https://cdn.discordapp.com/attachments/1453100452265857044/1453362136943431731/ChatGPT_Image_23_dic_2025_20_28_05.png?ex=6957b877&is=695666f7&hm=1a803ae0a5132bb471d81d00a021bcfd41d1ca517747bd93b26d63f3462469b6" alt="Escuadrón X" class="logo">
+      <div>
+        <h1>Escuadrón X</h1>
+        <p>Panel de Administración Profesional</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="loginBtn">Iniciar sesión con Google</button>
+      <button id="logoutBtn" style="display:none;">Cerrar sesión</button>
+    </div>
   </header>
 
-  <section id="dashboard" style="display:none;">
-    <h2>Miembros del Clan</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Rango</th>
-          <th>Puntos</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody id="miembrosTabla"></tbody>
-    </table>
-  </section>
+  <main id="dashboard" style="display:none;">
+
+    <section class="panel-section">
+      <h2>Miembros del Clan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Rango</th>
+            <th>Puntos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="miembrosTabla"></tbody>
+      </table>
+    </section>
+
+    <section class="panel-section">
+      <h2>Misiones</h2>
+      <div class="form-row">
+        <input type="text" id="misionTitulo" placeholder="Título de la misión">
+        <input type="text" id="misionDescripcion" placeholder="Descripción">
+        <input type="number" id="misionPuntos" placeholder="Puntos">
+        <button id="crearMisionBtn">Crear misión</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Puntos</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="misionesTabla"></tbody>
+      </table>
+    </section>
+
+    <section class="panel-section">
+      <h2>Sanciones y advertencias</h2>
+      <div class="form-row">
+        <input type="text" id="sancionUsuarioId" placeholder="ID de usuario">
+        <input type="text" id="sancionMotivo" placeholder="Motivo">
+        <select id="sancionTipo">
+          <option value="Advertencia">Advertencia</option>
+          <option value="Sanción">Sanción</option>
+        </select>
+        <button id="crearSancionBtn">Registrar</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Tipo</th>
+            <th>Motivo</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="sancionesTabla"></tbody>
+      </table>
+    </section>
+
+    <section class="panel-section">
+      <h2>Historial de acciones</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Acción</th>
+            <th>Usuario</th>
+            <th>Realizado por</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="historialTabla"></tbody>
+      </table>
+    </section>
+
+  </main>
 
 </body>
 </html>
