@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #444;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff0000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+}
+
+tr:hover {
+  background: #222;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escuadrón X - Panel Profesional</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Escuadrón X - Panel de Administración</h1>
+    <button id="loginBtn">Iniciar sesión con Google</button>
+    <button id="logoutBtn" style="display:none;">Cerrar sesión</button>
+  </header>
+
+  <section id="dashboard" style="display:none;">
+    <h2>Miembros del Clan</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Rango</th>
+          <th>Puntos</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="miembrosTabla"></tbody>
+    </table>
+  </section>
+
+</body>
+</html>
